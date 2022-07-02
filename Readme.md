@@ -42,7 +42,7 @@ Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 
 - [Java](https://dev.java/)
 - [Koin](https://insert-koin.io/)
-- [Retrifit](https://square.github.io/retrofit/)
+- [Retrofit](https://square.github.io/retrofit/)
 - [Android Studio](https://developer.android.com/studio)
 
 <br>
