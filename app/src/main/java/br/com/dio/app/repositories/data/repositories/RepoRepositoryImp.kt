@@ -7,7 +7,9 @@ class RepoRepositoryImp(private val githubService: GithubService) : RepoReposito
     override suspend fun listRepos(user: String) = flow {
         try {
             val repoList = githubService.listRepos(user)
-            emit(repoList)
+            val repoFiltered = repoList.filter { it.description != null }
+            val repoSorted = repoFiltered.sortedByDescending { it.id }
+            emit(repoSorted)
         } catch (e: Throwable) {
             throw Throwable("Algo deu errado!")
         }
