@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/layout_spacing_1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRepoBookmarked"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/layout_spacing_1"
+            android:layout_marginTop="@dimen/layout_spacing_1"
+            android:src="@drawable/ic_baseline_bookmarked_24"
+            android:tint="@color/blue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRepoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_spacing_1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivRepoBookmarked"
+            app:layout_constraintLeft_toRightOf="@id/ivRepoBookmarked"
+            app:layout_constraintTop_toTopOf="@id/ivRepoBookmarked"
+            tools:text="@sample/repositories.json/data/name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRepoDescription"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="@dimen/layout_spacing_1"
+            android:textColor="@color/textLight"
+            app:flow_verticalAlign="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
+            tools:text="@sample/repositories.json/data/description" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRepoLanguageColor"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="@dimen/layout_spacing_1"
+            android:src="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRepoDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRepoLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_spacing_1"
+            android:textColor="@color/textDark"
+            app:layout_constraintBottom_toBottomOf="@id/ivRepoLanguageColor"
+            app:layout_constraintLeft_toRightOf="@id/ivRepoLanguageColor"
+            app:layout_constraintTop_toTopOf="@id/ivRepoLanguageColor"
+            tools:text="@sample/repositories.json/data/language" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
