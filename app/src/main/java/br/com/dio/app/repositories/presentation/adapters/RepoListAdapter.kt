@@ -5,10 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import br.com.dio.app.repositories.R
 import br.com.dio.app.repositories.data.model.Repo
 import br.com.dio.app.repositories.databinding.RepositoryCardBinding
-import com.bumptech.glide.Glide
 
 class RepoListAdapter : ListAdapter<Repo, RepoListAdapter.ViewHolder>(DiffCallback()) {
     inner class ViewHolder(

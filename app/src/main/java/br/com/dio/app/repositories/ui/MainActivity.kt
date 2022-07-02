@@ -3,6 +3,7 @@ package br.com.dio.app.repositories.ui
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,6 +48,8 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                 }
                 is MainViewModel.State.Success -> {
                     dialog.dismiss()
+                    binding.tvNoRepoMessage.visibility = View.GONE
+                    binding.rvRepoList.visibility = View.VISIBLE
                     adapter.submitList(it.list)
                 }
             }
